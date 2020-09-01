@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Created Route for pages with PagesController
+Route::get('/','PagesController@index');
+Route::get('/about','PagesController@about');
+Route::get('/services','PagesController@services');
