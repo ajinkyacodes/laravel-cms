@@ -7,14 +7,21 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function index() {
-        return view('pages.index');
+        $title='Laravel CMS';
+        // return view('pages.index', compact('title')); //Method 1 of passing single value parameter
+        return view('pages.index')->with('title',$title); //Method 2 of passing single or multiple value parameters (as array)
     }
 
     public function about() {
-        return view('pages.about');
+        $title='About Us';
+        return view('pages.about')->with('title', $title);
     }
 
     public function services() {
-        return view('pages.services');
+        $data = array(
+            'title' => 'Services',
+            'services' => ['Website Design', 'Programming', 'SEO']                
+        );
+        return view('pages.services')->with($data);
     }
 }
