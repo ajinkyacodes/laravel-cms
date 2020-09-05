@@ -16,5 +16,11 @@
     </body>
     <script src="{{asset('assets/js/jQuery3.5.1.js')}}"></script>
     <script src="{{asset('assets/vendor/bootstrap-4.3.1/bootstrap.min.js')}}"></script>
+    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.ckeditor').ckeditor();
+        });
+    </script>
     <script src="{{asset('assets/js/script.js')}}"></script>
 </html>
