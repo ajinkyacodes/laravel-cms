@@ -1,19 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{config('app.name', 'Laravel-CMS')}}</title>
-        <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-        <link rel="stylesheet" href="{{asset('assets/vendor/bootstrap-4.3.1/bootstrap.min.css')}}">
-    </head>
-    <body>
-        @include('inc.navbar')
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/vendor/bootstrap-4.3.1/bootstrap.min.css')}}">
+</head>
+<body>
+    @include('inc.navbar')
+    <div id="app">
+        @include('inc.messages')
         <div class="container">
             @include('inc.messages')
             @yield('content')
         </div>
-    </body>
+    </div>
     <script src="{{asset('assets/js/jQuery3.5.1.js')}}"></script>
     <script src="{{asset('assets/vendor/bootstrap-4.3.1/bootstrap.min.js')}}"></script>
     <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
@@ -23,4 +33,5 @@
         });
     </script>
     <script src="{{asset('assets/js/script.js')}}"></script>
+</body>
 </html>
