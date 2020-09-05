@@ -10,9 +10,11 @@
     <body>
         @include('inc.navbar')
         <div class="container">
-            @yield('content')            
+            @include('inc.messages')
+            @yield('content')
         </div>
     </body>
     <script src="{{asset('assets/js/jQuery3.5.1.js')}}"></script>
+    <script src="{{asset('assets/vendor/bootstrap-4.3.1/bootstrap.min.js')}}"></script>
     <script src="{{asset('assets/js/script.js')}}"></script>
 </html>
