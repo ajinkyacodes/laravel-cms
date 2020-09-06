@@ -13,8 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
+                    <a href="/posts/create" class="btn btn-primary mb-4">Create Post</a>
+                    <h3>Your Blog Posts</h3>
+                    {{-- {{ __('You are logged in!') }} --}}
                 </div>
             </div>
         </div>
