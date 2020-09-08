@@ -16,13 +16,16 @@
     <link rel="stylesheet" href="{{asset('assets/vendor/bootstrap-4.3.1/bootstrap.min.css')}}">
 </head>
 <body>
-    @include('inc.navbar')
-    <div id="app">
-        <div class="container">
-            @include('inc.messages')
-            @yield('content')
+    @include('inc.header')
+    <main>
+        <div id="app">
+            <div class="container">
+                @include('inc.messages')
+                @yield('content')
+            </div>
         </div>
-    </div>
+    </main>
+    @include('inc.footer')
     <script src="{{asset('assets/js/jQuery3.5.1.js')}}"></script>
     <script src="{{asset('assets/vendor/bootstrap-4.3.1/bootstrap.min.js')}}"></script>
     <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
