@@ -8,7 +8,9 @@
                     <div class="row">
                         <div class="col-md-4 col-sm-4">
                             <figure>
-                                <img src="/storage/cover_images/{{$post->cover_image}}" alt="{{$post->title}}">
+                                <a href="/posts/{{$post->id}}" title="{{$post->title}}">
+                                    <img src="/storage/cover_images/{{$post->cover_image}}" alt="{{$post->title}}">
+                                </a>
                             </figure>
                         </div>
                         <div class="col-md-8 col-sm-8">
